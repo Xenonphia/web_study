@@ -1,4 +1,9 @@
 [
   "obsidian-git",
-  "copilot"
+  "copilot",
+  "calendar",
+  "table-editor-obsidian",
+  "obsidian-tasks-plugin",
+  "obsidian-excalidraw-plugin",
+  "dataview"
 ]
