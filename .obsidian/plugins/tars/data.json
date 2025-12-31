@@ -1,0 +1,68 @@
+{
+  "editorStatus": {
+    "isTextInserting": false
+  },
+  "providers": [
+    {
+      "tag": "OpenAI",
+      "vendor": "OpenAI",
+      "options": {
+        "apiKey": "",
+        "baseURL": "https://api.openai.com/v1",
+        "model": "gpt-4.1",
+        "parameters": {}
+      }
+    },
+    {
+      "tag": "QianFan",
+      "vendor": "QianFan",
+      "options": {
+        "apiKey": "",
+        "apiSecret": "",
+        "baseURL": "https://aip.baidubce.com/rpc/2.0/ai_custom/v1/wenxinworkshop/chat",
+        "model": "ernie-4.0-8k-latest",
+        "parameters": {}
+      }
+    },
+    {
+      "tag": "Qwen",
+      "vendor": "Qwen",
+      "options": {
+        "apiKey": "sk-1298b984a5444698aa6329957c3d0511",
+        "baseURL": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+        "model": "qwen-plus",
+        "parameters": {}
+      }
+    }
+  ],
+  "systemTags": [
+    "System",
+    "系统"
+  ],
+  "newChatTags": [
+    "NewChat",
+    "新对话"
+  ],
+  "userTags": [
+    "User",
+    "我"
+  ],
+  "roleEmojis": {
+    "assistant": "✨",
+    "system": "🔧",
+    "newChat": "🚀",
+    "user": "💬"
+  },
+  "promptTemplates": [],
+  "enableInternalLink": true,
+  "enableInternalLinkForAssistantMsg": false,
+  "answerDelayInMilliseconds": 2000,
+  "confirmRegenerate": true,
+  "enableTagSuggest": true,
+  "tagSuggestMaxLineLength": 21,
+  "enableExportToJSONL": false,
+  "enableReplaceTag": false,
+  "enableDefaultSystemMsg": true,
+  "defaultSystemMsg": "",
+  "enableStreamLog": false
+}
