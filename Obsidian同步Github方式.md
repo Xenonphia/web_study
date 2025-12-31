@@ -15,8 +15,12 @@ git remote set-url origin git@github.com:Xenonphia/note_vault.git`
 ```
 
 
+```Test
+git remote -v
+ssh -T git@github.com
+```
 
-
+git remote set-url origin ssh://git@ssh.github.com:443/Xenonphia/note_vault.git
 
 建议：
 - 在 Obsidian Git 插件中，将 **Custom Git binary path** 指向系统 Git
