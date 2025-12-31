@@ -3,6 +3,18 @@
 生成密钥后上传到github
 
 
+生成密钥
+ssh-keygen -t ed25519 -C "tjs666tjs@gmail.com"
+- 私钥：`C:\Users\Skyline\.ssh\id_ed25519`
+    
+- 公钥：`C:\Users\Skyline\.ssh\id_ed25519.pub`
+
+```Powershell
+cd "C:\Users\Skyline\你的Vault目录"
+git remote set-url origin git@github.com:Xenonphia/note_vault.git`
+```
+
+
 
 
 
