@@ -8,5 +8,7 @@
   "enabledCssSnippets": [
     "extended-colorschemes",
     "custom-rainbow-colors"
-  ]
+  ],
+  "baseFontSize": 16,
+  "baseFontSizeAction": false
 }

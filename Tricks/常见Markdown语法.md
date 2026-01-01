@@ -57,3 +57,30 @@ Date: 2026-01-01
 ## 两根波浪线~
 ~~删除示例~~
 
+# 无序列表
+## 使用一个-加上point
+- 这是一个实例
+
+# 有序列表
+## 直接数字.的形式
+1.
+	1.1
+	1.2
+2.
+	2.1
+
+
+# 代办事项
+## -加上中括号
+- [x] This is your none. ✅ 2026-01-02
+### 可以用鼠标直接点击打勾
+### 也可以在括号内输入对应字符或者数字
+### 选择特殊标识或者气泡颜色
+- [?] This is your none.
+- [!] This is your none.
+- [0] This is your none.
+- [1] This is your none.
+- [2] This is your none.
+- [4] This is your none.
+
+#### 特殊功能对应主题的style编辑
