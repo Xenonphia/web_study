@@ -1,4 +1,7 @@
 {
   "cssTheme": "Cupertino",
-  "accentColor": "#be43c7"
+  "accentColor": "#be43c7",
+  "interfaceFontFamily": "LXGW Bright GB",
+  "textFontFamily": "LXGW Bright GB",
+  "monospaceFontFamily": "LXGW Bright GB"
 }
