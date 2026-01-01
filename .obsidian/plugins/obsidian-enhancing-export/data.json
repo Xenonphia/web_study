@@ -55,5 +55,8 @@
   "defaultExportDirectoryMode": "Auto",
   "openExportedFile": true,
   "env": {},
-  "showExportProgressBar": true
+  "showExportProgressBar": true,
+  "pandocPath": {
+    "win32": "D:\\Obsidian\\pandoc-3.8.3\\pandoc.exe"
+  }
 }
