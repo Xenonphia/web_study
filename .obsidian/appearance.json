@@ -1,8 +1,12 @@
 {
-  "cssTheme": "Cupertino",
+  "cssTheme": "AnuPpuccin",
   "accentColor": "#ec51c2",
   "interfaceFontFamily": "霞鹜文楷,LXGW Bright GB",
   "textFontFamily": "霞鹜文楷,LXGW Bright GB",
   "monospaceFontFamily": "霞鹜文楷,LXGW Bright GB",
-  "theme": "system"
+  "theme": "system",
+  "enabledCssSnippets": [
+    "extended-colorschemes",
+    "custom-rainbow-colors"
+  ]
 }
