@@ -482,7 +482,7 @@
   "markdownNodeOneClickEditing": false,
   "canvasImmersiveEmbed": true,
   "startupScriptPath": "",
-  "aiEnabled": true,
+  "aiEnabled": false,
   "openAIAPIToken": "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",
   "openAIDefaultTextModel": "gpt-3.5-turbo-1106",
   "openAIDefaultTextModelMaxTokens": 4096,

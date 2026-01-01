@@ -1,3 +1,9 @@
+---
+tags:
+  - Readme
+Date: 2026-01-01
+---
+
 ```text
 This is a test file.
 Let's try to start.
