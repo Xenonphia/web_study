@@ -88,7 +88,7 @@ Date: 2026-01-01
 #### 特殊功能对应主题的style编辑
 
 
-# 引用/标注 callout
+# 引用 callout
 强调功能
 >==这是一次引用加上强调的内容==
 >--引用实例
@@ -98,3 +98,34 @@ Date: 2026-01-01
 >>第二次
 >>>第三次~!
 
+
+# 标注
+>[!caution] Title
+>This is a noted callout!
+>
+
+## 使用提示词来改变前面的图标
+例如bug note danger等
+也可以鼠标右键点击修改
+如果加-/+会默认收起/展开
+
+>[!caution]- Title
+>This is a noted callout!
+
+>[!caution]+ Title
+>This is a noted callout!
+
+# 注释
+在文字后加上[^1]的形式[^2]
+并且可以直接放文段后也可以（需要空行一行）
+也可以直接在末尾添加注释的形式^[这是第三个注释，RECO]
+甚至可以链接到其他的笔记^[[ReadME](../ReadME.md)]
+
+[^2]:可以通过阅读模式观看注释形式
+
+
+
+
+
+
+[^1]:This is a footnote
