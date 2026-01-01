@@ -34,5 +34,5 @@ Date: 2026-01-01
 ![ReadME](../ReadME.md#^1778d3)
 
 # 外部链接[]
-## 使用一对中括号包裹文字然后链接
-[Google]
+## 使用一对中括号包裹文字然后()链接地址
+[Google](https://google.com)
