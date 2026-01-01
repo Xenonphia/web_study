@@ -6,8 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
-      "LiAlbum",
-      "LiAlignRight"
+      "LiAward",
+      "LiAccessibility",
+      "LiAperture",
+      "LiAlertTriangle",
+      "LiAlignVerticalJustifyEnd"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -31,6 +34,10 @@
     "debugMode": false,
     "useInternalPlugins": false
   },
-  "File_include": "LiAlignRight",
-  "Diary": "LiAlbum"
+  "File_include": "LiAlignVerticalJustifyEnd",
+  "Diary": "LiAlbum",
+  "RCE": "LiAlertTriangle",
+  "serialize": "LiAperture",
+  "Skyline": "LiAccessibility",
+  "Tricks": "LiAward"
 }

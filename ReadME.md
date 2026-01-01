@@ -14,7 +14,6 @@ Let's try to start.
 
 ^1778d3
 
-#### <mark style="background: #FFB8EBA6;">快捷键将文件经行使用</mark>
 
 ==This is a highlight file!==
 
