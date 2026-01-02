@@ -7,7 +7,8 @@
   "theme": "system",
   "enabledCssSnippets": [
     "extended-colorschemes",
-    "custom-rainbow-colors"
+    "custom-rainbow-colors",
+    "highlighter"
   ],
   "baseFontSize": 16,
   "baseFontSizeAction": false

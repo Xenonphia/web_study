@@ -1,0 +1,6 @@
+/* 修复 Highlighter / mark 高亮文字颜色 */
+.markdown-preview-view mark,
+.cm-s-obsidian span.cm-highlight,
+mark {
+  color: var(--text-normal) !important;
+}
