@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "LiAlignHorizontalDistributeCenter",
       "LiAward",
       "LiAccessibility",
       "LiAperture",
-      "LiAlertTriangle",
-      "LiAlignVerticalJustifyEnd"
+      "LiAlertTriangle"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -39,5 +39,6 @@
   "RCE": "LiAlertTriangle",
   "serialize": "LiAperture",
   "Skyline": "LiAccessibility",
-  "Tricks": "LiAward"
+  "Tricks": "LiAward",
+  "SQL": "LiAlignHorizontalDistributeCenter"
 }
