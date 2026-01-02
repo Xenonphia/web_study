@@ -5,7 +5,7 @@ Date: 2026-01-01
 
 下载Git插件后，如果代理失败
 使用ssh链接
-生成密钥后上传到==Github==接收
+生成密钥后上传到<mark style="background: #FFB8EBA6;">Github</mark>接收
 
 ```Powershell
 ssh-keygen -t ed25519 -C "tjs666tjs@gmail.com"
