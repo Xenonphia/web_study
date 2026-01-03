@@ -139,3 +139,15 @@ print_r($doc -> saveXML());//输出xml内容
 ![](assets/PHP解析XML/file-20260103210630776.png)
 
 此时是直接展示了每一块的内容在页面上
+
+```php
+<?php
+
+$doc = new DOMDocument();//实例化DOMDocument类
+
+$doc->load("test.xml");//加载xml
+
+print_r($doc -> saveXML());//输出xml内容
+```
+
+也可以使用`load()`函数直接加载xml文件，达到一样的效果
