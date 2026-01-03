@@ -164,3 +164,4 @@ echo $doc->getElementsByTagName("title")->item(1)->nodeValue;//获取第二个ti
 ![](assets/PHP解析XML/file-20260103211719001.png)
 
 ## 混合读取
+
