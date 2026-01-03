@@ -160,3 +160,6 @@ print_r($doc -> saveXML());//输出xml内容
 echo $doc->getElementsByTagName("title")->item(0)->nodeValue;//获取第一个title节点的值
 echo $doc->getElementsByTagName("title")->item(1)->nodeValue;//获取第二个title节点的值
 ```
+
+![](assets/PHP解析XML/file-20260103211719001.png)
+
