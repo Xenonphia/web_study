@@ -13,7 +13,7 @@ XML指可扩展标记语言
 
 ## XML示例
 ```XML
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?> //XML声明
 <root>
 	<student>
 			<name>Guc</name>
