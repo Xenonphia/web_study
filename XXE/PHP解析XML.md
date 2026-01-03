@@ -119,3 +119,20 @@ XXE in PHP
 
 ### DOMDocument是一个类
 要使用其读取xml文件，首先需要实例化一个对象
+
+```php
+<?php
+
+$xml = file_get_contents("test.xml");//读取xml文件内容，此时是字符串
+
+$doc = new DOMDocument();//实例化DOMDocument类
+
+$doc->loadXML($xml);//加载xml字符串
+
+print_r($doc -> saveXML());//输出xml内容
+
+?>
+```
+
+### 这里需要注意读取xml文件的时候使用file_get_contents()函数，而不是include()函数，因为要以字符串的形式读取，不然会被当作php文件执行从而报错
+
