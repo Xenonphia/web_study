@@ -151,3 +151,12 @@ print_r($doc -> saveXML());//输出xml内容
 ```
 
 也可以使用`load()`函数直接加载xml文件，达到一样的效果
+
+### 如果要读取某一个节点的值
+需要使用到函数`getElementsByTagName("name")`
+传入要读取的节点的名称，再指向第几个元素，最后使用nodevalue
+
+```php
+echo $doc->getElementsByTagName("title")->item(0)->nodeValue;//获取第一个title节点的值
+echo $doc->getElementsByTagName("title")->item(1)->nodeValue;//获取第二个title节点的值
+```
