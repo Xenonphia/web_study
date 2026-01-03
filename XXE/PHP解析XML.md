@@ -165,3 +165,7 @@ echo $doc->getElementsByTagName("title")->item(1)->nodeValue;//获取第二个ti
 
 ## 混合读取
 
+结合两种方式，可以先使用DOC函数实例化一个对象后读取xml文件，加载之后在使用simplexml函数
+
+```
+```
