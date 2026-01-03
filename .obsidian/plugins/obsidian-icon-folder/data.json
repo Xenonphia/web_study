@@ -40,5 +40,6 @@
   "serialize": "LiAperture",
   "Skyline": "LiAccessibility",
   "Tricks": "LiAward",
-  "SQL": "LiAlignHorizontalDistributeCenter"
+  "SQL": "LiAlignHorizontalDistributeCenter",
+  "XXE": "LiAperture"
 }
