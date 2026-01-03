@@ -116,3 +116,6 @@ XXE in PHP
 
 ## 方式二 DOMDocument
 数据通常以POST方式把字符串提交进去，以xml结构提交给目标网站，再通过php伪协议读取内容，进行xml解析
+
+### DOMDocument是一个类
+要使用其读取xml文件，首先需要实例化一个对象
