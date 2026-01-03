@@ -2,7 +2,7 @@
 tags:
   - include
   - PHP
-Date: 2026-01-02
+date: 2026-01-02
 ---
 
 ## 有一些题目会使用jpg后缀

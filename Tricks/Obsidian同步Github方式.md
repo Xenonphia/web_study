@@ -1,6 +1,6 @@
 ---
 Trick: 软件同步
-Date: 2026-01-01
+date: 2026-01-01
 ---
 
 下载Git插件后，如果<mark style="background: #D2B3FFA6;">代理</mark>失败
