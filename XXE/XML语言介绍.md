@@ -12,6 +12,7 @@ XML指可扩展标记语言
 结构类似于 <mark style="background: #FFB8EBA6;">根，枝，叶</mark>
 
 ## XML示例
+
 ```XML
 <?xml version="1.0" encoding="utf-8"?> //XML声明
 <root>
@@ -21,10 +22,13 @@ XML指可扩展标记语言
 	</student>
 </root>
 ```
+
 它的标签没有被预定义，需要自我定义，因此可以任意标签
 而HTML的`<h1></h1>`就是预定义的一级标题
 主要功能作为数据传输
+
 ![](assets/XML语言介绍/file-20260103192233189.png)
+
 ## 对比HTML
 
 | XML     | HTML  |
@@ -32,4 +36,5 @@ XML指可扩展标记语言
 | 数据读取    | 开发网页  |
 | 标签无意义   | 标签预定义 |
 | 传输和存储数据 | 显示数据  |
+
 因此，XML没有任何行为功能

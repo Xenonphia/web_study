@@ -6,6 +6,7 @@ tags:
 date: 2026-01-03
 ---
 ## 创建一份xml示例文件
+
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
 
@@ -58,6 +59,7 @@ print_r($xml);
 页面回显如下：
 
 ![](assets/PHP解析XML/file-20260103194713624.png)
+
 回显内容组成对象
 book作为属性
 用数组的方式回显了xml的内容
