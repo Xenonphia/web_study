@@ -41,3 +41,20 @@ date: 2026-01-03
 
 </info>
 ```
+
+## 方式一
+### 使用simplexml_load_file()函数
+构建php文件，定义一个变量存储函数内容，然后print_r打印
+```php
+<?php
+
+$xml = simplexml_load_file("test.xml");
+
+print_r($xml);
+
+?>
+```
+
+页面回显如下：
+![](assets/PHP解析XML/file-20260103194713624.png)
+用数组的方式回显了xml的内容
