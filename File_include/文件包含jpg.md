@@ -16,7 +16,7 @@ Date: 2026-01-02
 ```info.php 
 <?php phpinfo();?>
 ```
-将php文件打包成zip文件
+将php文件打包成<mark style="background: #FFB8EBA6;">zip</mark>文件
 ==zip://D:\phpstudy_pro\WWW\fileinclude\info1.zip%23info==
 格式为zip://文件路径/zip文件名称#压缩包内的文件名称 （使用时注意将#号进行URL编码--%23）
 
