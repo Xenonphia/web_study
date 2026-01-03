@@ -136,3 +136,6 @@ print_r($doc -> saveXML());//输出xml内容
 
 ### 这里需要注意读取xml文件的时候使用file_get_contents()函数，而不是include()函数，因为要以字符串的形式读取，不然会被当作php文件执行从而报错
 
+![](assets/PHP解析XML/file-20260103210630776.png)
+
+此时是直接展示了每一块的内容在页面上
