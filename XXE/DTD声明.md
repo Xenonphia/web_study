@@ -44,7 +44,8 @@ DTD可以用以定义标记的含义，约束XML规则的定义和陈述
 <!DOCTYPE info SYSTEM "eg.dtd" >
 ```
 
-对<mark style="background: #FFB8EBA6;"></mark>
+对<mark style="background: #FFB8EBA6;">info</mark>这个根元素SYSTEM引用外部DTD规则
+其中此时使用的相对路径，eg.dtd在同级目录下
 
 ```DTD
 <!ELEMENT info (book)>
@@ -53,3 +54,4 @@ DTD可以用以定义标记的含义，约束XML规则的定义和陈述
 
 <!ELEMENT author (#PCDATA)>
 ```
+
