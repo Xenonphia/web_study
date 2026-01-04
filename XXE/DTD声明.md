@@ -3,7 +3,7 @@ tags:
   - PHP
   - WEB
   - XML
-Date: 2026-01-04
+date: 2026-01-04
 ---
 ### DTD: Document Type Definition
 <mark style="background: #FFB8EBA6;">文档类型定义</mark>
@@ -54,4 +54,7 @@ DTD可以用以定义标记的含义，约束XML规则的定义和陈述
 
 <!ELEMENT author (#PCDATA)>
 ```
+
+因此，可以知道使用DTD声明，容易造成随意的文件读取，就是漏洞来源
+<mark style="background: #FFB8EBA6;">SYSTEM</mark>也可读取其他的文件
 
