@@ -18,7 +18,7 @@ tags:
 发现构建了一个判断登陆的函数dologin()
 下面明显就是xml的形式
 也可以直接使用抓包的形式劫持响应
-然后通过添加DTD声明命名实体外带信息回显到username
+然后通过添加DTD声明命名实体外带信息回显到username^1
 ```XML
 <!DOCTYPE root [<!ENTITY guc SYSTEM "file:///etc/passwd">]>
 
