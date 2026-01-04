@@ -73,3 +73,10 @@ Content-Length: auto
 ![](assets/XXE漏洞/file-20260104220405519.png)
 
 成功看到admin节点的回显
+
+因此在此基础上增加DTD声明读取外部文件
+注意形式 <!DOCTYPE root [<内容>]>
+```XML
+<!DOCTYPE root [<!ENTITY guc SYSTEM "file:///etc/pwasswd">]>
+```
+此处命名实体guc SYSTEM+file协议读取根目录的文件
