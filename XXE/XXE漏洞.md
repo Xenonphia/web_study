@@ -86,3 +86,6 @@ file协议从而读取/passwd
 ![](assets/XXE漏洞/file-20260104222031835.png)
 
 
+不同的程序支持的伪协议不同
+
+![](assets/XXE漏洞/file-20260104222320092.png)
