@@ -41,5 +41,13 @@ DTD可以用以定义标记的含义，约束XML规则的定义和陈述
 # 外部引入DTD
 例如
 ```XML
+<!DOCTYPE info SYSTEM "eg.dtd" >
+```
 
+```DTD
+<!ELEMENT info (book)>
+
+<!ELEMENT book (author, title, year, price, description)>
+
+<!ELEMENT author (#PCDATA)>
 ```
