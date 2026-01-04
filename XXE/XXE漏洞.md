@@ -2,6 +2,7 @@
 tags:
   - WEB
   - XXE
+  - PHP
 Date: 2026-01-04
 ---
 ## 什么是XXE
