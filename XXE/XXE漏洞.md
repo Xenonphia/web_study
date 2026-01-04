@@ -39,9 +39,9 @@ highlight_file(__FILE__);
 ?>
 ```
 最主要的在于`$benben = $creds->admin;`
-POST提交参数后展示了admin分支
+POST提交参数后echo了admin分支
 
-抓包提交POST查看响应
+抓包提交POST查看响应并且更改发包
 ```http
 POST /xxe01/xxe01/class06.php HTTP/1.1
 
