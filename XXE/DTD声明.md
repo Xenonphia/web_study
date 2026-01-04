@@ -44,6 +44,8 @@ DTD可以用以定义标记的含义，约束XML规则的定义和陈述
 <!DOCTYPE info SYSTEM "eg.dtd" >
 ```
 
+对<mark style="background: #FFB8EBA6;"></mark>
+
 ```DTD
 <!ELEMENT info (book)>
 
