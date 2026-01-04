@@ -166,6 +166,21 @@ echo $doc->getElementsByTagName("title")->item(1)->nodeValue;//获取第二个ti
 ## 混合读取
 
 结合两种方式，可以先使用DOC函数实例化一个对象后读取xml文件，加载之后在使用simplexml函数
+也就是先用DOC函数构造出xml对象，才能使用simplexml的函数，构建类的形式显示xml文件
 
+```php
+<?php
+
+$doc = new DOMDocument();//实例化DOMDocument类
+
+$xml = file_get_contents("test.xml");//读取xml文件内容，此时是字符串
+
+$doc->loadXML($xml);//加载xml字符串
+
+$final = simplexml_import_dom($doc);//将DOMDocument对象转换为SimpleXMLElement对象
+
+print_r($final);
 ```
-```
+
+![](assets/PHP解析XML/file-20260103213939692.png)
+
