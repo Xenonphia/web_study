@@ -14,3 +14,33 @@ date: 2026-01-04
 
 ## 实体的规范格式
 都是以&开始;结束
+
+```xml
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE info[
+    <!ELEMENT info (book)>
+    <!ELEMENT book (author, title, year, price, description)>
+    <!ELEMENT author (#PCDATA)>
+    <!ENTITY writer "Guc">
+    <!ENTITY popular "5.0">
+    ]>
+
+<info>
+    <book>
+        <author>&writer;</author>
+        <title>XXE in PHP</title>
+        <year>2024</year>
+        <price>39.99</price>
+        <description>This XML file is used to demonstrate XXE vulnerabilities in PHP applications.</description>
+        <high>&popular;</high>
+    </book>
+    <book>
+        <author>Jane Doe</author>
+        <title>Secure Coding Practices</title>
+        <year>2023</year>
+        <price>49.99</price>
+        <description>A comprehensive guide to secure coding techniques and best practices.</description>
+    </book>
+</info>
+```
+定义了实体writer和popular并且在下面调用
