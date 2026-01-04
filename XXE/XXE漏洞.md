@@ -77,6 +77,6 @@ Content-Length: auto
 因此在此基础上增加DTD声明读取外部文件
 注意形式 <!DOCTYPE root [<内容>]>
 ```XML
-<!DOCTYPE root [<!ENTITY guc SYSTEM "file:///etc/pwasswd">]>
+<!DOCTYPE root [<!ENTITY guc SYSTEM "file:///etc/passwd">]>
 ```
 此处命名实体guc SYSTEM+file协议读取根目录的文件
