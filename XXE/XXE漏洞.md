@@ -81,6 +81,7 @@ Content-Length: auto
 <!DOCTYPE root [<!ENTITY guc SYSTEM "file:///etc/passwd">]>
 ```
 此处命名实体guc SYSTEM+file协议读取根目录的文件
+file协议从而读取/passwd
 
 ![](assets/XXE漏洞/file-20260104222031835.png)
 
