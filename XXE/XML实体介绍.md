@@ -44,3 +44,15 @@ date: 2026-01-04
 </info>
 ```
 定义了实体writer和popular并且在下面调用
+
+并且可以迭代调用
+
+```XML
+    <!ENTITY writer "Guc">
+
+    <!ENTITY ch "&writer; skyline">
+```
+
+![](assets/XML实体介绍/file-20260104180438457.png)
+
+
