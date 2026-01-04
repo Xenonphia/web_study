@@ -3,7 +3,7 @@ Trick: 软件同步
 date: 2026-01-01
 ---
 
-下载Git插件后，如果<mark style="background: #D2B3FFA6;">代理</mark>失败
+下载Git插件后
 使用ssh链接
 <mark style="background: #FFB8EBA6;">将ssh在终端调整后</mark>
 生成密钥后上传到<mark style="background: #FFB8EBA6;">Github</mark>接收

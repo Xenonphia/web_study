@@ -57,4 +57,21 @@ date: 2026-01-04
 
 ## 参数实体
 替代可以重用的文本部分
+```XML
+<?xml version="1.0" encoding="utf-8"?>
 
+<!DOCTYPE info[
+
+    <!ENTITY % contents "author, title, year, price, description">
+
+    <!ELEMENT info (book,video)>
+
+    <!ELEMENT book (%contents;)>
+
+    <!ELEMENT video (%contents;)>
+
+    <!ELEMENT author (#PCDATA)>
+
+]>
+```
+当定义元素的时候可能会重复使用，就可以设定一个参数替代重复文本然后调用
