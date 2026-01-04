@@ -40,3 +40,36 @@ highlight_file(__FILE__);
 ```
 最主要的在于`$benben = $creds->admin;`
 POST提交参数后展示了admin分支
+
+抓包提交POST查看响应
+```http
+POST /xxe01/xxe01/class06.php HTTP/1.1
+
+Host: 172.28.222.35
+
+Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7,en-GB;q=0.6
+
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+Referer: http://172.28.222.35/
+
+DNT: 1
+
+Upgrade-Insecure-Requests: 1
+
+Accept-Encoding: gzip, deflate
+
+Content-Type: application/xml;charset=utf-8
+
+Content-Length: auto
+
+<root><admin>test</admin></root>
+```
+
+需要注意的是content-type需要对应的xml格式
+
+![](assets/XXE漏洞/file-20260104220405519.png)
+
+成功看到admin节点的回显
