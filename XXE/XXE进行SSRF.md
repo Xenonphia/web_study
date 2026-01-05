@@ -18,3 +18,4 @@ Date: 2026-01-05
 <result><code>0</code><msg>请输入要执行的命令，例如：http://ip/?cmd=ls</msg></result>
 ```
 
+根据提示更改DTD声明的SYSTEM内容即可获取数据
