@@ -14,3 +14,7 @@ Date: 2026-01-05
 
 回显了执行命令的提示
 这就是获取了内网主机的信息
+```http
+<result><code>0</code><msg>请输入要执行的命令，例如：http://ip/?cmd=ls</msg></result>
+```
+
