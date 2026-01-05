@@ -1,0 +1,7 @@
+---
+tags:
+  - XXE
+  - SSRF
+  - WEB
+Date: 2026-01-05
+---
