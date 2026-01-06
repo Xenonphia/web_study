@@ -32,3 +32,10 @@ XInclude 是 XML 标准的一部分，用于在一个 XML 文档中包含<mark s
 
 外部实体：无法成为一个成熟的独立的XML文档。不允许独立的XML声明和DTD声明
 Xinclude：可以调用一个独立完整的XML内容。
+
+## 与PHP文件包含的区别
+
+php：直接调用include()函数
+Xinclude：使用前需要做前缀声明
+例如：`<root xmlns:xi="http://www.w3.org/2001/XInclude">`
+
