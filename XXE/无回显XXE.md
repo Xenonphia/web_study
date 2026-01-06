@@ -49,4 +49,9 @@ Connection: close
 ![](assets/无回显XXE/file-20260105223820115.png)
 
 原因：内部DTD禁止参数实体内部再次调用参数实体
-suoyi
+
+但是外部DTD可以重复调用参数实体
+因此需要利用外部实体
+
+![](assets/无回显XXE/file-20260105224253471.png)
+
