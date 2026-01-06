@@ -38,4 +38,6 @@ Xinclude：可以调用一个独立完整的XML内容。
 php：直接调用include()函数
 Xinclude：使用前需要做前缀声明
 例如：`<root xmlns:xi="http://www.w3.org/2001/XInclude">`
+用以声明xi:include的标签
+
 
