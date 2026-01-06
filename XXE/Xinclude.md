@@ -26,5 +26,9 @@ XInclude 是 XML 标准的一部分，用于在一个 XML 文档中包含<mark s
 <!-- 包含另一个文件 --> <xi:include href="footer.xml"/> </root>
 ```
 
-	### 功能类似于php include
+### 功能类似于php include
 
+## 与外部实体的区别
+
+外部实体：无法成为一个成熟的独立的XML文档。不允许独立的XML声明和DTD声明
+Xinclude：可以调用一个独立完整的XML内容。
