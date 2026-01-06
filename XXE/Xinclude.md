@@ -37,7 +37,7 @@ Xinclude：可以调用一个独立完整的XML内容。
 
 php：直接调用include()函数
 Xinclude：使用前需要做前缀声明
-例如：`<root xmlns:xi="http://www.w3.org/2001/XInclude">`
+例如：`<root xmlns:xi="http://www.w3.org/2001/XInclude">` -->官方xinclude路径
 用以声明xi:include的标签
 
 ### 常见安全风险
@@ -61,3 +61,10 @@ Xinclude：使用前需要做前缀声明
     
 - **禁用外部实体**：防止XXE漏洞
 
+### 靶场利用
+```xml
+<root xmlns:xi="http://www.w3.org/2001/XInclude">
+<xi:include href="/etc/passwd" parse="text">
+</root>
+```
+在实际利用不能有<mark style="background: #FFB8EBA6;">换行符</mark>
