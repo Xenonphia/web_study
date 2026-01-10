@@ -71,7 +71,7 @@ Content-Length: auto
 
 需要注意的是content-type需要对应的xml格式
 
-![](assets/XXE漏洞/file-20260104220405519.png)
+![](assets/XXE漏洞/file-20260110221035656.png)
 
 成功看到admin节点的回显
 
@@ -84,9 +84,9 @@ Content-Length: auto
 此处命名实体guc SYSTEM+file协议读取根目录的文件
 file协议从而读取/passwd
 
-![](assets/XXE漏洞/file-20260104222031835.png)
+![](assets/XXE漏洞/file-20260110221035641.png)
 
 
 不同的程序支持的伪协议不同
 
-![](assets/XXE漏洞/file-20260104222320092.png)
+![](assets/XXE漏洞/file-20260110221035628.png)

@@ -53,7 +53,7 @@ date: 2026-01-04
     <!ENTITY ch "&writer; skyline">
 ```
 
-![](assets/XML实体/file-20260104212153667.png)
+![](assets/XML实体/file-20260110220950234.png)
 
 ## 参数实体
 替代可以重用的文本部分

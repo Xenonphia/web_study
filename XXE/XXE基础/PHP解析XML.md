@@ -58,7 +58,7 @@ print_r($xml);
 
 页面回显如下：
 
-![](assets/PHP解析XML/file-20260103194713624.png)
+![](assets/PHP解析XML/file-20260110221049789.png)
 
 回显内容组成对象
 book作为属性
@@ -136,7 +136,7 @@ print_r($doc -> saveXML());//输出xml内容
 
 ### 这里需要注意读取xml文件的时候使用file_get_contents()函数，而不是include()函数，因为要以字符串的形式读取，不然会被当作php文件执行从而报错
 
-![](assets/PHP解析XML/file-20260103210630776.png)
+![](assets/PHP解析XML/file-20260110221049750.png)
 
 此时是直接展示了每一块的内容在页面上
 
@@ -161,7 +161,7 @@ echo $doc->getElementsByTagName("title")->item(0)->nodeValue;//获取第一个ti
 echo $doc->getElementsByTagName("title")->item(1)->nodeValue;//获取第二个title节点的值
 ```
 
-![](assets/PHP解析XML/file-20260103211719001.png)
+![](assets/PHP解析XML/file-20260110221049775.png)
 
 ## 混合读取
 
@@ -182,5 +182,5 @@ $final = simplexml_import_dom($doc);//将DOMDocument对象转换为SimpleXMLElem
 print_r($final);
 ```
 
-![](assets/PHP解析XML/file-20260103213939692.png)
+![](assets/PHP解析XML/file-20260110221049762.png)
 
