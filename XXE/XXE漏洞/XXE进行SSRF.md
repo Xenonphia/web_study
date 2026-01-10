@@ -10,7 +10,7 @@ Date: 2026-01-05
 `*`得到内网ip`10.1.2.3`后
 使用http伪协议
 
-![](assets/XXE进行SSRF/file-20260105203516407.png)
+![](assets/XXE进行SSRF/file-20260110224125766.png)
 
 回显了执行命令的提示
 这就是获取了内网主机的信息
@@ -37,6 +37,6 @@ php://filter/read=convert.base64-encode/resource=/etc/passwd
 <!DOCTYPE root [<!ENTITY guc SYSTEM "php://filter/read=convert.base64-encode/resource=http://10.1.2.3/?cmd=cat%20index.php">]>
 ```
 
-![](assets/XXE进行SSRF/file-20260105210144530.png)
+![](assets/XXE进行SSRF/file-20260110224125781.png)
 
 通过base64即可读取被执行的php文件

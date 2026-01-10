@@ -20,7 +20,7 @@ php://
 ```
 直接使用终端对应命令例如ls即可
 
-![](assets/expect协议/file-20260105220932675.png)
+![](assets/expect协议/file-20260110224121021.png)
 
 ### expect伪协议对某些符号有限制
 包括空格` `，双引号`"`，管道符`|`，大括号`{}`，反斜线`\`，尖括号`<>`，冒号`:`
@@ -29,5 +29,5 @@ php://
 cat$IFS/etc/passwd
 ```
 
-![](assets/expect协议/file-20260105221505655.png)
+![](assets/expect协议/file-20260110224121020.png)
 

@@ -70,5 +70,5 @@ Xinclude：使用前需要做前缀声明
 在声明xinclude末尾没有斜杠
 包含xml文件的末尾有斜杠
 
-![](assets/Xinclude/file-20260106221617982.png)
+![](assets/Xinclude/file-20260110224132415.png)
 

