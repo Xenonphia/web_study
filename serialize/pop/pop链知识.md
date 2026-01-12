@@ -41,6 +41,7 @@ unserialize($_GET['test']);
 因此只需要调整test的参数即可
 对test赋值的时候将normal类更改到对应的evil类
 
-重新构造pop链：
-```
+重新构造一个test为新的对象，pop链：
+```php
+
 ```
