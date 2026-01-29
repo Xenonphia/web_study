@@ -144,4 +144,7 @@ unserialize($b);
 
 ?>
 ```
-首先分析，get方法传入benben赋值给b然后进行反序列化，其中`class fast`的wakeup()函数在反序列化之前触发，因此考虑入手调用
+首先分析，get方法传入benben赋值给b然后进行反序列化
+其中`class fast`的wakeup()函数在反序列化之前触发，因此考虑入手调用
+`class sec`的`tostring`函数会在对象被echo输出时调用
+刚好fast类里面触发wakeup会输出source的值，因此`需要source`赋值为sec的一个对象
