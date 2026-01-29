@@ -148,3 +148,13 @@ unserialize($b);
 其中`class fast`的wakeup()函数在反序列化之前触发，因此考虑入手调用
 `class sec`的`tostring`函数会在对象被echo输出时调用
 刚好fast类里面触发wakeup会输出source的值，因此`需要source`赋值为sec的一个对象
+
+-1.触发tostring
+-2.实例化对象fast，并且给属性source赋值为sec的一个对象
+-3.echo其序列化结果后提交
+在执行反序列化后则会依次触发wakeup和tostring
+
+![](assets/pop链知识/file-20260129154414991.png)
+
+![](assets/pop链知识/file-20260129154731573.png)
+
