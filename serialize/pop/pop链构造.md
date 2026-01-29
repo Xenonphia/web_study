@@ -83,5 +83,5 @@ echo "\n";
 echo unserialize($s);
 ```
 
-![](assets/pop链构造/file-20260129164822214.png)
+
 
