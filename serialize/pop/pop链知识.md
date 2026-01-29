@@ -102,3 +102,46 @@ O%3A5%3A%22index%22%3A1%3A%7Bs%3A11%3A%22%00index%00test%22%3BO%3A4%3A%22evil%22
 ![](assets/pop链知识/file-20260112205654423.png)
 
 因此通过重构pop链构造出了新的test传入从而触发漏洞点
+
+
+## 含魔术方法
+```php
+<?php
+
+//highlight_file(__FILE__);
+
+error_reporting(0);
+
+class fast {
+
+    public $source;
+
+    public function __wakeup(){
+
+        echo "wakeup is here!!";
+
+        echo  $this->source;
+
+    }
+
+}
+
+class sec {
+
+    var $benben;
+
+    public function __tostring(){
+
+        echo "tostring is here!!";
+
+    }
+
+}
+
+$b = $_GET['benben'];
+
+unserialize($b);
+
+?>
+```
+首先分析，get方法传入benben赋值给b然后进行反序列化，其中`class fast`的wakeup()函数在反序列化之前触发，因此考虑入手调用
