@@ -52,3 +52,45 @@ $b = unserialize($payload);
 
 ![](assets/wakeup绕过/file-20260131152139549.png)
 
+### 例题演示
+```php
+<?php  
+error_reporting(0);  
+class secret{  
+    var $file='index.php';  
+  
+    public function __construct($file){        $this->file=$file;  
+    }  
+  
+    function __destruct(){  
+        include_once($this->file);  
+        echo $flag;  
+    }  
+  
+    function __wakeup(){        $this->file='index.php';  
+    }  
+}  
+$cmd=$_GET['cmd'];  
+if (!isset($cmd)){    highlight_file(__FILE__);  
+}  
+else{  
+    if (preg_match('/[oc]:\d+:/i',$cmd)){  
+        echo "Are you daydreaming?";  
+    }  
+    else{        unserialize($cmd);  
+    }  
+}  
+//sercet in flag.php  
+?>
+```
+### 分析
+1.首先在页面判断cmd是否提交，如果提交进行下一个if判断，正则匹配不允许出现o:0-9的形式
+2.绕过过滤后，反序列化提交内容
+
+### 问题
+1.反序列化一定触发wakeup
+2.需要触发析构函数
+
+### 解决
+1.file属性需要赋值flag.php
+2.利用wakeup漏洞进行绕过
