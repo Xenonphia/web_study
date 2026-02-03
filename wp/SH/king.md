@@ -1,4 +1,4 @@
-1.
+1.logic.js->result\=\=win
 ```js
 fetch('check.php', {
   method: 'POST',
