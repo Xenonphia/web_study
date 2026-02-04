@@ -20,3 +20,4 @@ contents压缩文件的内容；
 signature签名，放在文件末尾；
 
 Phar协议解析文件时，会自动触发对<mark style="background: #FFB8EBA6;">manifest字段</mark>的序列化字符串进行==反序列化==
+因此，在有destruct和wakeup等函数的时候就可以利用phar反序列化漏洞
