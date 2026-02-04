@@ -54,3 +54,34 @@ $_SESSION['b'] = $_GET['b'];
 将得到的sess放进winhex查看二进制形式，可以看到键名前面有表示长度(06--benben/01--b)的标识
 
 ### 漏洞的产生
+1.储存部分
+使用serialize的格式存储
+```php
+<?php  
+highlight_file(__FILE__);  
+error_reporting(0);  
+ini_set('session.serialize_handler','php_serialize');  
+session_start();  
+$_SESSION['ben'] = $_GET['a'];  
+?>
+```
+
+2.漏洞页面
+使用php的形式读取
+```php
+<?php   
+highlight_file(__FILE__);  
+error_reporting(0);  
+  
+ini_set('session.serialize_handler','php');  
+session_start();  
+  
+class D{  
+    var $a;  
+    function __destruct(){  
+        eval($this->a);  
+    }  
+}  
+?>
+```
+
