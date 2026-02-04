@@ -41,5 +41,8 @@ func AdminCmd(c *gin.Context) {
 因此需要跳过reset，把污染过的命令给到admin去执行，因为题目说了每隔一段时间会执行ls，需要把污染的命令给到admin
 `payload = "; cat /flag > templates/login.html"`
 
+`{"args": "; cat /flag > templates/login.html", "cmd": 123}`
+构造的错误json，结构体要求的是string，但是cmd键值是123为整数，因此函数结束返回
+
 刚好最近看了dnslog，最开始想到的是DNSlog带出，但是没有成功可能没发出去
 后面用ai写了py脚本直接多线程竞争污染，尝试了文件覆盖，将结果直接覆盖了/login得到flag
