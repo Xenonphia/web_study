@@ -21,7 +21,7 @@ PHP内部调用会话管理器，访问用户session被序列化以后，存储�
 
 产生了对应的session文件，其格式是键名|键值，也就是第一种php的存储格式
 
-如果使用serialize的格式进行存储也需要声明
+如果使用serialize的格式进行存储也需要handler声明
 ```php
 <?php  
 highlight_file(__FILE__);  
