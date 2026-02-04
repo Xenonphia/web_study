@@ -75,5 +75,7 @@ if(isset($_GET['filename']))
 bool(true)
 ```
 
-如何调用phar漏洞呢？
-使用phar://伪协议
+源码里面出现了反序列化一定调用的destruct函数，如何调用phar漏洞呢？
+使用phar://伪协议，读取phar文件并且
+
+### 生成phar文件
