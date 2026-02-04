@@ -31,3 +31,5 @@ phar文件能上传到服务器端   ---   /upload.php
 1.生成一个phar文件；在mate-data里放置一个包含TestObject()的序列化字符串；
 2.上传文件；
 3.md5file执行phar伪协议，触发反序列化；反序列化TestObject触发destruck执行echo $flag
+
+提示上传图片文件，直接将文件修改成png后缀
