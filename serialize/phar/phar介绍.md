@@ -42,3 +42,38 @@ php中一些常见的流包装器如下：
 ## phar反序列化漏洞
 
 漏洞成因：phar存储的meta-data信息以序列化方式存储，当文件操作函数通过phar://伪协议解析phar文件时就会将数据反序列化
+自动对manifest字段的序列化字符串进行反序列化
+
+![](assets/phar介绍/file-20260205013735205.png)
+
+简易漏洞
+```php
+<?php  
+highlight_file(__FILE__);  
+error_reporting(0);  
+class Testobj  
+{  
+    var $output="echo 'ok';";  
+    function __destruct()  
+    {  
+        eval($this->output);  
+    }  
+}  
+if(isset($_GET['filename']))  
+{    $filename=$_GET['filename'];    var_dump(file_exists($filename));  
+}  
+?>
+```
+
+*函数file_exists判断文件是否存在*
+例如
+```php
+?filename=/etc/passwd
+```
+返回
+```php
+bool(true)
+```
+
+如何调用phar漏洞呢？
+使用phar://伪协议
