@@ -33,3 +33,19 @@ $_SESSION['b'] = $_GET['b'];
 ?>
 ```
 
+![](assets/session介绍/file-20260204153906583.png)
+
+此时就以反序列化`a`数组形式展现
+
+同样的，binary格式也需要声明
+```php
+<?php  
+highlight_file(__FILE__);  
+error_reporting(0);  
+ini_set('session.serialize_handler','php_binary');  
+session_start();  
+$_SESSION['benben'] = $_GET['ben'];  
+$_SESSION['b'] = $_GET['b'];  
+?>
+```
+
