@@ -6,7 +6,10 @@ tags:
 Date: 2026-02-04
 ---
 # 什么是phar?
--JAR是开发Java程序一个应用，包括所有的可执行、可访问的文件，都打包进了一个JAR文件里，使得部署过程十分简单。
+一个php应用程序往往是由多个文件构成的，如果能把他们集中为一个文件来分发和运行是很方便的，这样的列子有很多，比如在window操作系统上面的安装程序、一个jquery库等等，为了做到这点php采用了phar文档文件格式，这个概念源自java的jar，但是在设计时主要针对 PHP 的 Web 环境，与 JAR 归档不同的是Phar归档可由 PHP 本身处理，因此不需要使用额外的工具来创建或使用，使用php脚本就能创建或提取它。phar是一个合成词，由PHP和 Archive构成，可以看出它是php归档文件的意思(简单来说phar就是php压缩文档，不经过解压就能被 php 访问并执行)
+phar文件本质上是一种压缩文件，会以序列化的形式存储用户自定义的meta-data；当受影响的文件操作函数调用phar文件时，会自动反序列化meta-data内的内容
+
+JAR是开发Java程序一个应用，包括所有的可执行、可访问的文件，都打包进了一个JAR文件里，使得部署过程十分简单。
 ==like a Java JAR,but foe PHP==
 ==PHAR("PhpARchive")==是PHP里类似于JAR的一种打包文件
 对于PHP<mark style="background: #FF5582A6;">5.3</mark>或更高版本，Phar后缀文件是默认开启支持的，可以直接使用它。
@@ -21,3 +24,21 @@ signature签名，放在文件末尾；
 
 Phar协议解析文件时，会自动触发对<mark style="background: #FFB8EBA6;">manifest字段</mark>的序列化字符串进行==反序列化==
 因此，在有destruct和wakeup等函数的时候就可以利用phar反序列化漏洞
+
+php中一些常见的流包装器如下：
+- file:// — 访问本地文件系统，在用文件系统函数时默认就使用该包装器
+- http:// — 访问 HTTP(s) 网址
+- ftp:// — 访问 FTP(s) URLs
+- php:// — 访问各个输入/输出流（I/O streams）
+- zlib:// — 压缩流
+- data:// — 数据（RFC 2397）
+- glob:// — 查找匹配的文件路径模式
+- phar:// — PHP 归档
+- ssh2:// — Secure Shell 2
+- rar:// — RAR
+- ogg:// — 音频流
+- expect:// — 处理交互式的流
+
+## phar反序列化漏洞
+
+漏洞成因：phar存储的meta-data信息以序列化方式存储，当文件操作函数通过phar://伪协议解析phar文件时就会将数据反序列化
