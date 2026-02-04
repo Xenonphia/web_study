@@ -98,3 +98,7 @@ $phar->addFromString("test.txt","test");  //添加要压缩的文件
 $phar->stopBuffering();  
 ?>
 ```
+
+![](assets/phar介绍/file-20260205014834162.png)
+
+xxd文件后看到phar的构成
