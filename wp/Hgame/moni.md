@@ -41,5 +41,5 @@ func AdminCmd(c *gin.Context) {
 因此需要跳过reset，把污染过的命令给到admin去执行，因为题目说了每隔一段时间会执行ls，需要把污染的命令给到admin
 `payload = "; cat /flag > templates/login.html"`
 
-刚好最近看了dnslog，最开始想到的是DNSlog带出，但是没有成功
+刚好最近看了dnslog，最开始想到的是DNSlog带出，但是没有成功可能没发出去
 后面用ai写了py脚本直接多线程竞争污染，尝试了文件覆盖，将结果直接覆盖了/login得到flag
