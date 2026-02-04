@@ -76,7 +76,6 @@ bool(true)
 ```
 
 源码里面出现了反序列化一定调用的destruct函数，如何调用phar漏洞呢？
-使用phar://伪协议，读取phar文件并且
 
 ### 生成phar文件
 ```php
@@ -102,3 +101,8 @@ $phar->stopBuffering();
 ![](assets/phar介绍/file-20260205014834162.png)
 
 xxd文件后看到phar的构成
+
+![](assets/phar介绍/file-20260205015018154.png)
+
+使用phar://伪协议，读取phar文件
+利用构造的`eval($_GET["a"]);`直接提交参数赋值给a执行，注意这里外面嵌套的eval，一是定义了a这个变量，外面再次用eval执行了提交的内容
