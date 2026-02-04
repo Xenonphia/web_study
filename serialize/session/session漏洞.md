@@ -17,7 +17,7 @@ class Flag{
 ```
 ### 分析
 Flag类里面的属性her会在反序列化的时候触发wakeup赋值1-10000随机md5值
-判断条件是her\=\=name
+判断条件是her\=\=\=name
 
 ### 解决
 通过引用的方式令name为her的值
@@ -56,5 +56,11 @@ O:4:"Flag":2:{s:4:"name";N;s:3:"her";R:2;}
 
 又因为此时，上传格式是用的serialize的处理器，读取时php处理器，因此提交的时候只需要加上|-->`|O:4:"Flag":2:{s:4:"name";N;s:3:"her";R:2;}`
 
- 
+![](assets/session漏洞/file-20260204165657525.png)
+
+回到index.php
+
+![](assets/session漏洞/file-20260204165714318.png)
+
+此时已经条件判断成功
 
