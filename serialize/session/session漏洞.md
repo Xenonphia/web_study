@@ -1,3 +1,11 @@
+---
+tags:
+  - session
+  - PHP
+  - serialize
+Date: 2026-02-03
+---
+
 ```php
 <?php  
 highlight_file(__FILE__);  
