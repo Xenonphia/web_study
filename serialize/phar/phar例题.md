@@ -32,4 +32,12 @@ phar文件能上传到服务器端   ---   /upload.php
 2.上传文件；
 3.md5file执行phar伪协议，触发反序列化；反序列化TestObject触发destruck执行echo $flag
 
+根据题目要求
 提示上传图片文件，直接将文件修改成png后缀
+
+![](assets/phar例题/file-20260205021938089.png)
+
+最后回到index.php
+POST提交使用phar伪协议读取文件
+
+![](assets/phar例题/file-20260205022055279.png)
