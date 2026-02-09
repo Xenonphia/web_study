@@ -1,0 +1,46 @@
+题目页面给出了一个上传接口，并且自带一个hello文件提供下载。
+通过抓包发现几个接口
+分别是
+/api/list_dir(列出当前目录文件，通过path=控制)
+/api/download_file/xxx(下载文件)
+/api/upload_file(上传文件)
+
+![](assets/easyuu/file-20260209233524794.png)
+在app/update的目录找到easyuu.zip，通过下载接口得到后发现是题目源码
+文件夹里面的.git首先查看历史
+```rust
+xxx
+-    let flag = env::var("FLAG").unwrap_or_default();
+-    view! { <p>{flag}</p> }
+xxx
+```
+得知flag的位置是在env里面，但是直接用下载接口没有获取到，应该是有权限限制
+
+在src/main.rs的主程序里面
+利用ai分析
+首先这里有一个上传点能够上传一个程序
+```rust
+line88
+async fn get_new_version() -> Option<Version> {
+    use tokio::process::Command;
+// 漏洞点：直接创建一个子进程运行 "./update/easyuu" 
+// 只要我们能把恶意文件上传到这个路径，这里就会执行它
+    let output = Command::new("./update/easyuu")
+        .arg("--version")
+        .output() // 这里触发了执行！
+xxx
+```
+再者这里给了程序的调用点
+```rust
+line54
+async fn update_watcher() { 
+xxx
+let check_interval = Duration::from_secs(5); 
+// 每 5 秒一次循环
+loop { 
+sleep(check_interval).await; 
+// 漏洞点：周期性调用 get_new_version  
+if let Some(new_version) = get_new_version().await {
+```
+
+最后
