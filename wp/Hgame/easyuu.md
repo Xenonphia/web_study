@@ -48,4 +48,4 @@ async fn update() -> Result<(), Box<dyn std::error::Error>> {
 }
 ```
 
-最后写一个c语言程序在linux环境静态编译获取env中的flag，上传后等执行刷新即可
+最后写一个c语言程序在linux环境静态编译获取env中的flag，存到uploads的目录里，上传后等执行刷新即可
