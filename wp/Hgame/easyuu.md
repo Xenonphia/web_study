@@ -24,9 +24,7 @@ line88
 async fn get_new_version() -> Option<Version> {
     use tokio::process::Command;
 // 漏洞点：直接创建一个子进程运行 "./update/easyuu" 
-// 只要我们能把恶意文件上传到这个路径，这里就会执行它
     let output = Command::new("./update/easyuu")
-        .arg("--version")
         .output() // 这里触发了执行！
 xxx
 ```
@@ -34,7 +32,6 @@ xxx
 ```rust
 line54
 async fn update_watcher() { 
-xxx
 let check_interval = Duration::from_secs(5); 
 // 每 5 秒一次循环
 loop { 
@@ -42,5 +39,12 @@ sleep(check_interval).await;
 // 漏洞点：周期性调用 get_new_version  
 if let Some(new_version) = get_new_version().await {
 ```
-
-最后
+最后这里提供了覆盖文件的漏洞
+```rust
+line 103
+async fn update() -> Result<(), Box<dyn std::error::Error>> {
+    let new_binary = "./update/easyuu";
+    self_replace::self_replace(&new_binary)?;
+// 漏洞点：利用 self_replace 库用新文件覆盖当前正在运行的进程
+}
+```
